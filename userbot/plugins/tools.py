@@ -1,10 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 import calendar
@@ -72,7 +72,7 @@ async def currency(event):
             f"https://free.currconv.com/api/v7/convert?q={fromcurrency}_{tocurrency}&compact=ultra&apiKey={Config.CURRENCY_API}"
         )
         symbols = await AioHttp().get_raw(
-            "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/Data/currency.py"
+            "https://raw.githubusercontent.com/xmtscf/catuserbot-Resources/master/Resources/Data/currency.py"
         )
 
         symbols = json.loads(re.sub(", *\n *}", "}", symbols.decode("utf-8")))

@@ -1,10 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 import os
@@ -42,7 +42,7 @@ async def _(event):
         await event.client.send_message(BOTLOG_CHATID, "#RESTART \n" "Bot Restarted")
     sandy = await edit_or_reply(
         event,
-        "Restarted. `.ping` me or `.help` to check if I am online, actually it takes 1-2 min for restarting",
+        "🔁Reiniciando...",
     )
     try:
         ulist = get_collectionlist_items()

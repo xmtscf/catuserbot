@@ -1,10 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 import re
@@ -113,22 +113,10 @@ async def bot_start(event):  # sourcery skip: low-code-quality
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hey! 👤{mention},\
-                        \nI am {my_mention}'s assistant bot.\
-                        \nYou can contact to my master from here.\
-                        \n\nPowered by [Catuserbot](https://t.me/catuserbot)"
-        buttons = [
-            (
-                Button.url("Repo", "https://github.com/TgCatUB/catuserbot"),
-                Button.url(
-                    "Deploy",
-                    "https://github.com/TgCatUB/nekopack",
-                ),
-            )
-        ]
+            start_msg = f"Olá! Bem-vindo(a). Eu sou o assistente virtual do Mateus. Como posso te ajudar hoje? Sinta-se à vontade para me enviar uma mensagem com suas dúvidas ou solicitações."
+        buttons = None
     else:
-        start_msg = "Hey Master!\
-            \nHow can i help you ?"
+        start_msg = "Como posso ajudar?"
         buttons = None
     try:
         if custompic:

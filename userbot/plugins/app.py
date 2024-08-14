@@ -1,10 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 import os
@@ -21,8 +21,8 @@ from . import catub, edit_delete, edit_or_reply
 plugin_category = "utils"
 
 
-bg_url_1 = "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/App/app-full.jpg"
-bg_url_2 = "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/App/app-suggest.jpg"
+bg_url_1 = "https://raw.githubusercontent.com/xmtscf/catuserbot-Resources/master/Resources/App/app-full.jpg"
+bg_url_2 = "https://raw.githubusercontent.com/xmtscf/catuserbot-Resources/master/Resources/App/app-suggest.jpg"
 
 
 def text_draw(font_name, font_size, img, text, width, hight, fill="white"):

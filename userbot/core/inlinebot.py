@@ -1,10 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 import json
@@ -43,7 +43,7 @@ tr = Config.COMMAND_HAND_LER
 
 def get_thumb(name=None, url=None):
     if url is None:
-        url = f"https://github.com/TgCatUB/CatUserbot-Resources/blob/master/Resources/Inline/{name}?raw=true"
+        url = f"https://github.com/xmtscf/catuserbot-Resources/blob/master/Resources/Inline/{name}?raw=true"
     return types.InputWebDocument(
         url=url, size=0, mime_type="image/jpeg", attributes=[]
     )
@@ -154,7 +154,7 @@ async def filemanager_article(event):
         title="File Manager",
         description=f"Inline file manager\nSyntax: ls (path optional)\nPath:  {path}",
         thumbnail=get_thumb("filemanager.jpg"),
-        media="https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Inline/filemanager.jpg",
+        media="https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Inline/filemanager.jpg",
         text=query,
         buttons=buttons,
     )
@@ -163,7 +163,7 @@ async def filemanager_article(event):
 async def deploy_article(event):
     buttons = [
         (
-            Button.url("Source code", "https://github.com/TgCatUB/catuserbot"),
+            Button.url("Source code", "https://github.com/xmtscf/catuserbot"),
             Button.url("Deploy", "https://github.com/TgCatUB/nekopack"),
         )
     ]
@@ -171,7 +171,7 @@ async def deploy_article(event):
         event,
         title="𝘾𝙖𝙩𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
         description="Deploy yourself.",
-        media="https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Inline/catlogo.png",
+        media="https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Inline/catlogo.png",
         text="𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁.",
         buttons=buttons,
     )
@@ -228,7 +228,7 @@ async def vcplayer_article(event):
             text=text,
             description="Manange Vc Stream.",
             buttons=buttons,
-            thumbnail="https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Inline/vcplayer.jpg",
+            thumbnail="https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Inline/vcplayer.jpg",
         )
     except Exception:
         return None
@@ -242,7 +242,7 @@ async def article_builder(event, method):
         buttons = [
             (
                 Button.inline("Stats", data="stats"),
-                Button.url("Repo", "https://github.com/TgCatUB/catuserbot"),
+                Button.url("Repo", "https://github.com/xmtscf/catuserbot"),
             )
         ]
         try:
@@ -549,10 +549,10 @@ async def hide_toll_secret(event, query, match, match3):
         sandy = ""
         if match:
             query = query[6:]
-            info_type = ["troll", "can't", "show message 🔐"]
+            info_type = ["troll", "can't", "Abrir 🔐"]
         else:
             query = query[7:]
-            info_type = ["secret", "can", "show message 🔐"]
+            info_type = ["secret", "can", "Abrir 🔐"]
         if "|" in query:
             iris, query = query.replace(" |", "|").replace("| ", "|").split("|")
             users = iris.split(" ")
@@ -594,7 +594,7 @@ async def hide_toll_secret(event, query, match, match3):
         thumbnail=get_thumb(f"{info_type[0]}.png"),
         text="✖✖✖"
         if match3
-        else f"🔒 A whisper message to {sandy}, Only he/she can open it.",
+        else f"🔒Mensagem privada para{sandy}",
         buttons=buttons,
     )
     return result, old_msg, jsondata, new_msg

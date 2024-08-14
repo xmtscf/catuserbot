@@ -3,10 +3,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Special Credits:
 # [Poolitzer](https://t.me/poolitzer)  (for creating spotify bio plugin)
@@ -552,17 +552,17 @@ def file_check():
         os.mkdir("./temp")
     if not os.path.exists(logo):
         urllib.request.urlretrieve(
-            "https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Spotify/cat.png",
+            "https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Spotify/cat.png",
             logo,
         )
     if not os.path.exists(font_mid):
         urllib.request.urlretrieve(
-            "https://github.com/TgCatUB/CatUserbot-Resources/blob/master/Resources/Spotify/GoogleSans-Medium.ttf?raw=true",
+            "https://github.com/xmtscf/catuserbot-Resources/blob/master/Resources/Spotify/GoogleSans-Medium.ttf?raw=true",
             font_mid,
         )
     if not os.path.exists(font_bold):
         urllib.request.urlretrieve(
-            "https://github.com/TgCatUB/CatUserbot-Resources/blob/master/Resources/Spotify/ArialUnicodeMS.ttf?raw=true",
+            "https://github.com/xmtscf/catuserbot-Resources/blob/master/Resources/Spotify/ArialUnicodeMS.ttf?raw=true",
             font_bold,
         )
     return logo, font_bold, font_mid
@@ -626,7 +626,7 @@ async def make_thumb(url, client, song, artist, now, full):
         myphoto = await client.download_media(photos[0])
     except IndexError:
         myphoto = urllib.request.urlretrieve(
-            "https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Spotify/SwagCat.jpg"
+            "https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Spotify/SwagCat.jpg"
         )
     user_lay = ellipse_layout_create(myphoto, 6, 30)
     thumbmask.paste(user_lay, (700, 450), user_lay)
@@ -673,7 +673,7 @@ async def get_spotify(response):
 
 async def spotify_inline_article():
     thumb = None
-    media = "https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Inline/spotify_off.png"
+    media = "https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Inline/spotify_off.png"
     if (
         not Config.SPOTIFY_CLIENT_ID
         or not Config.SPOTIFY_CLIENT_SECRET
@@ -693,7 +693,7 @@ async def spotify_inline_article():
             buttons = [Button.url("Open Spotify", "https://open.spotify.com/")]
         else:
             media, tittle, dic, lyrics, symbol = await get_spotify(response)
-            thumb = "https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Inline/spotify_on.png"
+            thumb = "https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Inline/spotify_on.png"
             query = f'**🎶 Track :- ** `{tittle}`\n**🎤 Artist :- ** `{dic["interpret"]}`'
             buttons = [
                 (

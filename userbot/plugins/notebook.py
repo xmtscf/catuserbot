@@ -1,10 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
-# This file is part of: https://github.com/TgCatUB/catuserbot
+# This file is part of: https://github.com/xmtscf/catuserbot
 # and is released under the "GNU v3.0 License Agreement".
 
-# Please see: https://github.com/TgCatUB/catuserbot/blob/master/LICENSE
+# Please see: https://github.com/xmtscf/catuserbot/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 import os
@@ -263,12 +263,12 @@ async def write_page(event):  # sourcery skip: low-code-quality
         os.mkdir("./temp")
     if not os.path.exists(temp_name):
         urllib.request.urlretrieve(
-            f"https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Notebook/Images/{page}.jpg",
+            f"https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Notebook/Images/{page}.jpg",
             temp_name,
         )
     if not os.path.exists(font_name):
         urllib.request.urlretrieve(
-            f"https://github.com/TgCatUB/CatUserbot-Resources/blob/master/Resources/Notebook/Fonts/{font}.ttf?raw=true",
+            f"https://github.com/xmtscf/catuserbot-Resources/blob/master/Resources/Notebook/Fonts/{font}.ttf?raw=true",
             font_name,
         )
     lines, text_wrap, font_size, linespace, position = notebook_values(page, font)
@@ -397,7 +397,7 @@ async def notebook_conf(event):  # sourcery skip: low-code-quality
     await event.delete()
     file = f"{temp_page}.jpg"
     urllib.request.urlretrieve(
-        f"https://github.com/TgCatUB/CatUserbot-Resources/raw/master/Resources/Notebook/Images/{temp_page}.jpg",
+        f"https://github.com/xmtscf/catuserbot-Resources/raw/master/Resources/Notebook/Images/{temp_page}.jpg",
         file,
     )
     await event.client.send_file(event.chat_id, file, caption=cap, reply_to=reply_to_id)

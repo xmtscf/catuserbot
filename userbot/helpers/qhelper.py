@@ -78,12 +78,12 @@ def file_check(re=True, me=True, mo=True, it=True, fa=True, sp=True, go=False):
         )
     if sp and not os.path.exists(special):
         urllib.request.urlretrieve(
-            "https://github.com/TgCatUB/CatUserbot-Resources/blob/master/Resources/Spotify/ArialUnicodeMS.ttf?raw=true",
+            "https://github.com/xmtscf/catuserbot-Resources/blob/master/Resources/Spotify/ArialUnicodeMS.ttf?raw=true",
             special,
         )
     if go and not os.path.exists(google):
         urllib.request.urlretrieve(
-            "https://github.com/TgCatUB/CatUserbot-Resources/blob/master/Resources/Spotify/GoogleSans-Medium.ttf?raw=true",
+            "https://github.com/xmtscf/catuserbot-Resources/blob/master/Resources/Spotify/GoogleSans-Medium.ttf?raw=true",
             google,
         )
 
